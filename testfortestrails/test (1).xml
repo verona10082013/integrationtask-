@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite>
+	<id>S1</id>
+	<name>Master</name>
+	<description></description>
+	<sections>
+		<section>
+		<name>1</name>
+		<description></description>
+						<cases>
+												<case>
+				<id>C1</id>
+				<title>Проверка обязательности заполнения полей формы &quot;Зв`язатися з нами&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Зв`язатися з нами&quot;
+3.Нажать кнопку &quot;Відправити&quot;</steps>
+										<expected>Обязательные поля формы выделились красным цветом и появилось уведомление над каждым из них &quot;Заповнити поле&quot;</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C2</id>
+				<title>Проверка отправки формы с корректно заполненными полями</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Зв`язатися з нами&quot;                                                                                                                                                                                                                                                                                                                    
+3.Заполить обязательные поля формы &quot;Ім`я&quot;,&quot;Телефон&quot;,&quot;E-mail&quot; корректными данными
+4.Ставим галочку возде &quot; приймаю умови політики конфіденційності&quot;
+5.Нажать кнопку &quot;Відправити&quot;</steps>
+										<expected>Появляется информационное уведомление &quot;Форма відправлена!&quot;</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C3</id>
+				<title>Проверка отправки формы с заполненными пробелами полями</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot; 
+3.Заполить обязательные поля формы пробелами &quot;Імя&quot;,&quot;Телефон&quot;,&quot;E-mail&quot; 
+4.Ставим галочку возде &quot; приймаю умови політики конфіденційності&quot;
+5.Нажать кнопку &quot;Відправити&quot;</steps>
+										<expected>Обязательные поля формы выделились красным цветом и появилось уведомление над каждым из них &quot;Заповнити поле&quot;</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C4</id>
+				<title>Проверка заполнения поля &quot;Телефон&quot; нечисловыми значениями</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Заполить  поля формы &quot;Імя&quot; и &quot;E-mail&quot; корректными значениями
+4.Заполнить поле &quot;Телефон&quot; нечисловыми значениями
+5.Ставим галочку возде &quot; приймаю умови політики конфіденційності&quot;
+6.Нажать кнопку &quot;Відправити&quot;</steps>
+										<expected>Возде поля &quot;Телефон&quot;появится информационное сообщение об ошибке &quot;Некорректный номер телефона&quot;</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C5</id>
+				<title>Проверка отправки формы с некорректным значением в поле &quot;email&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Заполить  поля формы &quot;Імя&quot; и  &quot;Телефон&quot; корректными значениями
+4.Заполнить поле &quot;E-mail&quot; некорректным значением не в заданном формате ([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}
+5.Ставим галочку возде &quot; приймаю умови політики конфіденційності&quot;
+6.Нажать кнопку &quot;Відправити&quot;</steps>
+										<expected>Возде поля &quot;E-mail&quot; появится информационное сообщение об ошибке &quot;Некорректно заполнено поле&quot;
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C6</id>
+				<title>Проверка максимально допустимого значение поля &quot;Імя&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Other</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Заполить поле &quot;Імя&quot; 40 символов
+ 
+</steps>
+										<expected>Поле &quot;Імя&quot; принимает максимум 40 символов</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C7</id>
+				<title>Проверка максимально допустимого значение поля &quot;E-mail&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Заполить поле &quot;E-mail&quot; 80 символов</steps>
+										<expected>Поле &quot;E-mail&quot; принимает максимум 40 символов</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C8</id>
+				<title>Проверка максимально допустимого значение поля &quot;Телефон&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Заполить поле &quot;Телефон&quot; 9 символами</steps>
+										<expected>Поле &quot;E-mail&quot; принимает максимум 9 символов</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C9</id>
+				<title>Проверка минимально допустимого значение поля &quot;Імя&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Заполить поле &quot;Імя&quot; 1 символ</steps>
+										<expected>Поле &quot;Імя&quot; принимает минимум 1символ</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C10</id>
+				<title>Проверка отправленных данных в форме в базе данных</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>High</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;                                                                                                                                                                                                                                                                                                                     3.Заполить обязательные поля формы &quot;Імя&quot;,&quot;Телефон&quot;,&quot;E-mail&quot; корректными данными
+4.Ставим галочку возде &quot; приймаю умови політики конфіденційності&quot;
+5.Нажать кнопку &quot;Відправити&quot;
+</steps>
+										<expected>Данные с формы успешно сохранены в базе данных </expected>
+									</custom>
+							</case>
+															<case>
+				<id>C11</id>
+				<title>Проверка прикрепления документа к форме в доспустимых форматах</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot; 
+3.Прикрепляем документ в допустмых форматах .gif,.png,.jpg,.jpeg,.pdf,.txt,.doc,.docx
+
+
+</steps>
+										<expected>Документ успешно загружен</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C12</id>
+				<title>Проверка максимально допустимого значение поля &quot;Імя&quot;</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Заполить поле &quot;Коментар&quot; 1200 символов</steps>
+										<expected>Поле &quot;Коментар&quot; принимает максимум 1200 символов</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C13</id>
+				<title>Проверка прикрепления документа к форме в недоспустимых форматах</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Прикрепляем документ в недопустмых форматах например zip или rar</steps>
+										<expected>Ошибка загрузки документа</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C14</id>
+				<title>Проверка возможности выбора международного кода телефона согда списку стран</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Проверяем наличие выпадающего списка стран с международным кодом телефона
+
+</steps>
+										<expected>После нажатия на иконку с флагом страны и кодом появляется  выпадающий список стран с международным кодом телефона
+</expected>
+									</custom>
+							</case>
+															<case>
+				<id>C15</id>
+				<title>Проверка возможности выбора тематики обращения из выпадающего списка</title>
+												<template>Test Case (Text)</template>
+																<type>Functional</type>
+																<priority>Medium</priority>
+																				<estimate></estimate>
+																								<references></references>
+																				<custom>
+										<automation_type><id>0</id><value> None</value></automation_type>
+										<steps>1.Открыть главную страницу сайта https://zezman.ua/
+2.Проскролить вниз в футер сайта к форме &quot;Звязатися з нами&quot;
+3.Проверяем возможность выбора тематики обращения из выпадающего списка : &quot;Коммерческое предложение&quot;, &quot;Земельные участки&quot;, &quot;Вакансии&quot;, &quot;Маркетинг&quot;, &quot;Другое&quot;</steps>
+										<expected>Возможность выбора тематики обращения из выпадающего списка </expected>
+									</custom>
+							</case>
+								</cases>
+							</section>
+	</sections>
+</suite>
